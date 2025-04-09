@@ -1,8 +1,38 @@
-# Getting Started with Create React App
+# Sakuntalam Outdoor Advertising Company Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive website for Sakuntalam Outdoor Advertising Company based in Prayagraj, Uttar Pradesh.
 
-## Available Scripts
+## Features
+
+- Responsive design that works on all devices
+- Modern UI with smooth animations and transitions
+- Multiple pages: Home, About Us, Services, Contact Us
+- Google Maps integration for office location
+- Contact form for customer inquiries
+
+## Deployment Instructions
+
+### Deploying to Vercel
+
+1. Push your code to GitHub:
+   ```
+   git remote add origin https://github.com/YOUR_USERNAME/outdoor-ad-company.git
+   git push -u origin master
+   ```
+
+2. Go to [Vercel](https://vercel.com) and sign up/login
+
+3. Click "New Project" and import your GitHub repository
+
+4. Use the following settings:
+   - Framework Preset: Create React App
+   - Build Command: `npm run build`
+   - Output Directory: `build`
+   - Install Command: `npm install`
+
+5. Click "Deploy"
+
+## Development
 
 In the project directory, you can run:
 
