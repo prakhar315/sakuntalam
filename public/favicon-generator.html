@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rounded Favicon Generator</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0;
+      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      text-align: center;
+    }
+    
+    .rounded-image {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #4CAF50;
+    }
+    
+    canvas {
+      display: none;
+    }
+    
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    button:hover {
+      background-color: #45a049;
+    }
+    
+    .instructions {
+      margin-top: 20px;
+      max-width: 500px;
+      text-align: left;
+      padding: 15px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Rounded Favicon Generator</h1>
+    <img id="original" src="logo.jpg" alt="Original Logo" class="rounded-image">
+    <canvas id="canvas" width="64" height="64"></canvas>
+    <br>
+    <button onclick="generateFavicon()">Generate Rounded Favicon</button>
+    
+    <div class="instructions">
+      <h3>Instructions:</h3>
+      <ol>
+        <li>Click the "Generate Rounded Favicon" button</li>
+        <li>Right-click on the rounded image and select "Save image as..."</li>
+        <li>Save it as "favicon.ico" in the public folder</li>
+        <li>Update the index.html file to use favicon.ico instead of logo.jpg</li>
+      </ol>
+    </div>
+  </div>
+  
+  <script>
+    function generateFavicon() {
+      const canvas = document.getElementById('canvas');
+      const ctx = canvas.getContext('2d');
+      const img = document.getElementById('original');
+      
+      // Clear canvas
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // Create circular clipping path
+      ctx.beginPath();
+      ctx.arc(32, 32, 30, 0, Math.PI * 2, true);
+      ctx.closePath();
+      ctx.clip();
+      
+      // Draw image
+      ctx.drawImage(img, 0, 0, 64, 64);
+      
+      // Add border
+      ctx.strokeStyle = '#4CAF50';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+      
+      // Convert to data URL and open in new tab
+      const dataUrl = canvas.toDataURL('image/png');
+      const newTab = window.open();
+      newTab.document.write('<img src="' + dataUrl + '" alt="Rounded Favicon">');
+      newTab.document.close();
+    }
+  </script>
+</body>
+</html>

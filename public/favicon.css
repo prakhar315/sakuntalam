@@ -1,0 +1,22 @@
+/* This CSS is used to make the favicon appear rounded in the browser tab */
+
+/* Create a custom favicon using CSS */
+head::before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  width: 16px;
+  height: 16px;
+  background: url('logo.jpg') center/cover no-repeat;
+  border-radius: 50%;
+  border: 3px solid #4CAF50;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  z-index: 9999;
+}
+
+/* Hide the original favicon */
+link[rel="icon"] {
+  display: none;
+}
