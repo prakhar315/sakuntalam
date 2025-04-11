@@ -45,11 +45,11 @@ function Footer() {
           <div className="footer-logo">
             <Link to="/" className="social-logo">
               <img src={logo} alt="OutdoorAds Logo" className="footer-logo-img" />
-              sakuntalam Ads
+              sakuntlam Ads
       
             </Link>
           </div>
-          <small className="website-rights">sakuntalam Ads © {new Date().getFullYear()}</small>
+          <small className="website-rights">sakuntlam Ads © {new Date().getFullYear()}</small>
           <div className="social-icons">
             <a
               className="social-icon-link facebook"
