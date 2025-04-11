@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cityGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#2E7D32;stop-opacity:0.6" />
+    </linearGradient>
+  </defs>
+  <rect width="300" height="200" fill="url(#cityGradient)"/>
+  <g fill="#fff" opacity="0.7">
+    <!-- Stylized buildings -->
+    <rect x="20" y="80" width="30" height="120"/>
+    <rect x="60" y="100" width="30" height="100"/>
+    <rect x="100" y="60" width="40" height="140"/>
+    <rect x="150" y="90" width="30" height="110"/>
+    <rect x="190" y="70" width="50" height="130"/>
+    <rect x="250" y="110" width="30" height="90"/>
+    
+    <!-- Windows -->
+    <rect x="25" y="90" width="20" height="10" fill="#333"/>
+    <rect x="25" y="110" width="20" height="10" fill="#333"/>
+    <rect x="25" y="130" width="20" height="10" fill="#333"/>
+    <rect x="25" y="150" width="20" height="10" fill="#333"/>
+    <rect x="25" y="170" width="20" height="10" fill="#333"/>
+    
+    <rect x="65" y="110" width="20" height="10" fill="#333"/>
+    <rect x="65" y="130" width="20" height="10" fill="#333"/>
+    <rect x="65" y="150" width="20" height="10" fill="#333"/>
+    <rect x="65" y="170" width="20" height="10" fill="#333"/>
+    
+    <rect x="110" y="70" width="20" height="10" fill="#333"/>
+    <rect x="110" y="90" width="20" height="10" fill="#333"/>
+    <rect x="110" y="110" width="20" height="10" fill="#333"/>
+    <rect x="110" y="130" width="20" height="10" fill="#333"/>
+    <rect x="110" y="150" width="20" height="10" fill="#333"/>
+    <rect x="110" y="170" width="20" height="10" fill="#333"/>
+  </g>
+</svg>

@@ -12,6 +12,14 @@ import pg from '../img/clients/pg.png';
 import nextias from '../img/clients/nextias.png';
 import maruti from '../img/clients/maruti.png';
 
+// Import city images
+import prayagrajImg from '../img/cities/prayagraj.jpg';
+import lucknowImg from '../img/cities/lucknow.jpg';
+import kanpurImg from '../img/cities/kanpur.jpg';
+import ayodhyaImg from '../img/cities/ayodhya.jpg';
+import varanasiImg from '../img/cities/varanasi.jpg';
+import delhiImg from '../img/cities/delhi.jpg';
+
 function Home() {
   return (
     <div className="home">
@@ -44,29 +52,41 @@ function Home() {
           <h2>OUR COVERAGE</h2>
           <p>We provide outdoor advertising solutions in major cities across the country:</p>
           <div className="cities-grid">
-            <div className="city-card">
-              <h3>Prayagraj</h3>
-              <p>50+ Locations</p>
+            <div className="city-card" style={{ backgroundImage: `url(${prayagrajImg})` }}>
+              <div className="city-overlay">
+                <h3>Prayagraj</h3>
+                <p>50+ Locations</p>
+              </div>
             </div>
-            <div className="city-card">
-              <h3>Lucknow</h3>
-              <p>30+ Locations</p>
+            <div className="city-card" style={{ backgroundImage: `url(${lucknowImg})` }}>
+              <div className="city-overlay">
+                <h3>Lucknow</h3>
+                <p>30+ Locations</p>
+              </div>
             </div>
-            <div className="city-card">
-              <h3>Kanpur</h3>
-              <p>25+ Locations</p>
+            <div className="city-card" style={{ backgroundImage: `url(${kanpurImg})` }}>
+              <div className="city-overlay">
+                <h3>Kanpur</h3>
+                <p>25+ Locations</p>
+              </div>
             </div>
-            <div className="city-card">
-              <h3>Ayodhya</h3>
-              <p>20+ Locations</p>
+            <div className="city-card" style={{ backgroundImage: `url(${ayodhyaImg})` }}>
+              <div className="city-overlay">
+                <h3>Ayodhya</h3>
+                <p>20+ Locations</p>
+              </div>
             </div>
-            <div className="city-card">
-              <h3>Varanasi</h3>
-              <p>10+ Locations</p>
+            <div className="city-card" style={{ backgroundImage: `url(${varanasiImg})` }}>
+              <div className="city-overlay">
+                <h3>Varanasi</h3>
+                <p>10+ Locations</p>
+              </div>
             </div>
-            <div className="city-card">
-              <h3>Delhi</h3>
-              <p>50+ Locations</p>
+            <div className="city-card" style={{ backgroundImage: `url(${delhiImg})` }}>
+              <div className="city-overlay">
+                <h3>Delhi</h3>
+                <p>50+ Locations</p>
+              </div>
             </div>
           </div>
         </div>
