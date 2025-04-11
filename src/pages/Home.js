@@ -252,7 +252,7 @@ function Home() {
             </div>
           </div>
           <div className="testimonial">
-            <p>"Sakuntalam OutdoorAds helped us increase our brand visibility by 40% in just three months!"</p>
+            <p>"Sakuntlam OutdoorAds helped us increase our brand visibility by 40% in just three months!"</p>
             <h4>- Marketing Director, Pantaloons</h4>
           </div>
         </div>

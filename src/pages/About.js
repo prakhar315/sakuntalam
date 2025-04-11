@@ -15,7 +15,7 @@ function About() {
           <div className="about-section-content">
             <div className="about-text">
               <p>
-                Founded in 2008, <span className="highlight">Sakuntalam</span> has grown from a small local advertising agency to one of the leading outdoor advertising companies in Uttar Pradesh. Our journey began with a simple mission: to help businesses connect with their audience through impactful outdoor advertising solutions.
+                Founded in 2008, <span className="highlight">Sakuntlam</span> has grown from a small local advertising agency to one of the leading outdoor advertising companies in Uttar Pradesh. Our journey began with a simple mission: to help businesses connect with their audience through impactful outdoor advertising solutions.
               </p>
               <p>
                 Over the years, we have expanded our reach to cover major cities across the state, building a reputation for creativity, reliability, and results. Today, we are proud to serve hundreds of clients, from small local businesses to multinational corporations.
@@ -55,7 +55,7 @@ function About() {
             </div>
             <div className="about-text">
               <p>
-                At <span className="highlight">Sakuntalam</span>, our mission is to transform the outdoor advertising landscape by combining creativity, technology, and strategic placement to deliver impactful advertising solutions that help our clients achieve their marketing goals.
+                At <span className="highlight">Sakuntlam</span>, our mission is to transform the outdoor advertising landscape by combining creativity, technology, and strategic placement to deliver impactful advertising solutions that help our clients achieve their marketing goals.
               </p>
               <p>
                 We believe in the power of outdoor advertising to create meaningful connections between brands and their audience. Our commitment to innovation, quality, and customer satisfaction drives everything we do.
@@ -91,10 +91,10 @@ function About() {
               <h3>Gyanendra Singh</h3>
               <p className="founder-title">CEO & Founder</p>
               <p className="founder-description">
-                With over 15 years of experience in the advertising industry, Gyanendra Singh founded Sakuntalam in 2008 with a vision to revolutionize outdoor advertising in Uttar Pradesh. His innovative approach and deep understanding of the local market have been instrumental in the company's growth and success.
+                With over 15 years of experience in the advertising industry, Gyanendra Singh founded Sakuntlam in 2008 with a vision to revolutionize outdoor advertising in Uttar Pradesh. His innovative approach and deep understanding of the local market have been instrumental in the company's growth and success.
               </p>
               <p className="founder-description">
-                Under his leadership, Sakuntalam has expanded its operations to cover major cities across the state and has built a reputation for delivering high-quality, impactful advertising solutions. Gyanendra's commitment to excellence, customer satisfaction, and ethical business practices continues to drive the company forward.
+                Under his leadership, Sakuntlam has expanded its operations to cover major cities across the state and has built a reputation for delivering high-quality, impactful advertising solutions. Gyanendra's commitment to excellence, customer satisfaction, and ethical business practices continues to drive the company forward.
               </p>
              
             </div>
