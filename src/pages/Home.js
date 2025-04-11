@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Home.css';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 // Import client logos
 import hindustan from '../img/clients/hindustan.png';
@@ -20,17 +23,88 @@ import ayodhyaImg from '../img/cities/ayodhya.jpg';
 import varanasiImg from '../img/cities/varanasi.jpg';
 import delhiImg from '../img/cities/delhi.jpg';
 
+// Import billboard images
+import billboard1 from '../img/billboards/billboard1.svg';
+import billboard2 from '../img/billboards/billboard2.svg';
+import billboard3 from '../img/billboards/billboard3.svg';
+import billboard4 from '../img/billboards/billboard4.svg';
+
 function Home() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Slider settings
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    fade: true,
+    cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
+    beforeChange: (_, next) => setCurrentSlide(next),
+    appendDots: dots => (
+      <div className="custom-dots">
+        <ul> {dots} </ul>
+      </div>
+    ),
+    customPaging: i => (
+      <div className={`dot ${i === currentSlide ? 'active' : ''}`}></div>
+    )
+  };
+
+  // Billboard slides data
+  const slides = [
+    {
+      image: billboard1,
+      title: 'PREMIUM BILLBOARDS',
+      subtitle: 'High-Impact Advertising Solutions',
+      description: 'Reach thousands of potential customers daily with our strategically placed billboards.'
+    },
+    {
+      image: billboard2,
+      title: 'DIGITAL DISPLAYS',
+      subtitle: 'Dynamic Content for Maximum Engagement',
+      description: 'Captivate your audience with vibrant digital displays that stand out day and night.'
+    },
+    {
+      image: billboard3,
+      title: 'FLEX BANNERS',
+      subtitle: 'Cost-Effective Advertising',
+      description: 'High-quality printing and weather-resistant materials for long-lasting impact.'
+    },
+    {
+      image: billboard4,
+      title: 'CUSTOM SOLUTIONS',
+      subtitle: 'Tailored to Your Needs',
+      description: 'From concept to execution, we create custom outdoor advertising solutions for your brand.'
+    }
+  ];
+
   return (
     <div className="home">
       {/* Hero Section */}
       <div className="hero-container">
-        <h1>OUTDOOR ADVERTISING SOLUTIONS</h1>
-        <p>Reach Your Audience Everywhere</p>
-        <div className="hero-btns">
-          <button className="btn btn-primary">GET STARTED</button>
-          <button className="btn btn-outline">LEARN MORE</button>
-        </div>
+        <Slider {...sliderSettings} className="hero-slider">
+          {slides.map((slide, index) => (
+            <div key={index} className="hero-slide">
+              <div
+                className="slide-background"
+                style={{ backgroundImage: `url(${slide.image})` }}
+              ></div>
+              <div className="slide-content">
+                <h1>{slide.title}</h1>
+                <h2>{slide.subtitle}</h2>
+                <p>{slide.description}</p>
+                <div className="hero-btns">
+                  <button className="btn btn-primary">GET STARTED</button>
+                  <button className="btn btn-outline">LEARN MORE</button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </Slider>
       </div>
 
       {/* About Section */}
