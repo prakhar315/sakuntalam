@@ -3,6 +3,7 @@ import './Home.css';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 // Import client logos
 import hindustan from '../img/clients/hindustan.png';
@@ -32,15 +33,35 @@ import billboard4 from '../img/billboards/billboard4.svg';
 function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  // Custom arrow components
+  const PrevArrow = (props) => {
+    const { className, onClick } = props;
+    return (
+      <div className={className} onClick={onClick}>
+        <FaChevronLeft />
+      </div>
+    );
+  };
+
+  const NextArrow = (props) => {
+    const { className, onClick } = props;
+    return (
+      <div className={className} onClick={onClick}>
+        <FaChevronRight />
+      </div>
+    );
+  };
+
   // Slider settings
   const sliderSettings = {
     dots: true,
     infinite: true,
-    speed: 1000,
+    speed: 1500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 6000,
+    pauseOnHover: false,
     fade: true,
     cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
     beforeChange: (_, next) => setCurrentSlide(next),
@@ -51,7 +72,18 @@ function Home() {
     ),
     customPaging: i => (
       <div className={`dot ${i === currentSlide ? 'active' : ''}`}></div>
-    )
+    ),
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          dots: true
+        }
+      }
+    ]
   };
 
   // Billboard slides data
@@ -94,12 +126,25 @@ function Home() {
                 style={{ backgroundImage: `url(${slide.image})` }}
               ></div>
               <div className="slide-content">
-                <h1>{slide.title}</h1>
-                <h2>{slide.subtitle}</h2>
-                <p>{slide.description}</p>
-                <div className="hero-btns">
-                  <button className="btn btn-primary">GET STARTED</button>
-                  <button className="btn btn-outline">LEARN MORE</button>
+                <div className="slide-number">{index + 1}/{slides.length}</div>
+                <div className="slide-content-inner">
+                  <h1>{slide.title}</h1>
+                  <div className="slide-divider"></div>
+                  <h2>{slide.subtitle}</h2>
+                  <p>{slide.description}</p>
+                  <div className="hero-btns">
+                    <button className="btn btn-primary">GET STARTED</button>
+                    <button className="btn btn-outline">LEARN MORE</button>
+                  </div>
+                </div>
+                <div className="slide-progress-container">
+                  <div
+                    className="slide-progress"
+                    style={{
+                      animationDuration: `${sliderSettings.autoplaySpeed}ms`,
+                      animationPlayState: currentSlide === index ? 'running' : 'paused'
+                    }}
+                  ></div>
                 </div>
               </div>
             </div>
