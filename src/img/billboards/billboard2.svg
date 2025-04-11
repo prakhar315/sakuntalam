@@ -7,10 +7,10 @@
     </linearGradient>
   </defs>
   <rect width="1600" height="900" fill="url(#skyGradient)"/>
-  
+
   <!-- Highway -->
   <rect x="0" y="600" width="1600" height="300" fill="#333"/>
-  
+
   <!-- Road Markings -->
   <g fill="#fff">
     <rect x="100" y="750" width="100" height="10"/>
@@ -22,30 +22,28 @@
     <rect x="1300" y="750" width="100" height="10"/>
     <rect x="1500" y="750" width="100" height="10"/>
   </g>
-  
+
   <!-- Billboard -->
   <g>
     <rect x="300" y="100" width="1000" height="450" fill="#fff" stroke="#333" stroke-width="10"/>
     <rect x="320" y="120" width="960" height="410" fill="#4CAF50"/>
-    <text x="800" y="300" font-family="Arial" font-size="80" text-anchor="middle" fill="#fff" font-weight="bold">SAKUNTALAM</text>
-    <text x="800" y="400" font-family="Arial" font-size="50" text-anchor="middle" fill="#fff">OUTDOOR ADVERTISING</text>
   </g>
-  
+
   <!-- Billboard Support -->
   <rect x="780" y="550" width="40" height="50" fill="#555"/>
-  
+
   <!-- Cars -->
   <g>
     <rect x="200" y="700" width="80" height="30" fill="#f44336" rx="5"/>
     <rect x="210" y="680" width="60" height="20" fill="#f44336" rx="5"/>
     <circle cx="220" cy="730" r="10" fill="#333"/>
     <circle cx="260" cy="730" r="10" fill="#333"/>
-    
+
     <rect x="400" y="710" width="90" height="30" fill="#2196F3" rx="5"/>
     <rect x="410" y="690" width="70" height="20" fill="#2196F3" rx="5"/>
     <circle cx="420" cy="740" r="10" fill="#333"/>
     <circle cx="470" cy="740" r="10" fill="#333"/>
-    
+
     <rect x="1200" y="705" width="100" height="35" fill="#FFC107" rx="5"/>
     <rect x="1210" y="680" width="80" height="25" fill="#FFC107" rx="5"/>
     <circle cx="1225" cy="740" r="12" fill="#333"/>

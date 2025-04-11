@@ -164,7 +164,7 @@
 }
 
 .hero-btns {
-  margin-top: 32px;
+  margin-top: 40px;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.8s ease 0.9s, transform 0.8s ease 0.9s;
@@ -173,7 +173,8 @@
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
+  gap: 20px;
 }
 
 .slick-active .hero-btns {
@@ -220,7 +221,7 @@
 }
 
 .btn {
-  padding: 14px 30px;
+  padding: 16px 32px;
   font-size: 1.2rem;
   font-weight: 600;
   border: none;
@@ -231,11 +232,11 @@
   letter-spacing: 1px;
   position: relative;
   overflow: hidden;
-  margin: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   outline: none;
-  min-width: 180px;
+  min-width: 200px;
   text-align: center;
+  white-space: nowrap;
 }
 
 .btn::before {
@@ -411,15 +412,16 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 300px;
-    margin-top: 20px;
+    max-width: 280px;
+    margin-top: 25px;
+    gap: 15px;
   }
 
   .btn {
-    margin: 5px 0;
-    padding: 12px 20px;
+    padding: 14px 24px;
     font-size: 1rem;
     min-width: 100%;
+    white-space: normal;
   }
 
   .slide-progress-container {
@@ -448,14 +450,18 @@
 @media screen and (max-width: 480px) {
   .slide-content h1 {
     font-size: 2rem;
+    margin-bottom: 8px;
   }
 
   .slide-content h2 {
     font-size: 1.3rem;
+    margin-bottom: 12px;
   }
 
   .slide-content p {
     font-size: 1rem;
+    margin-bottom: 15px;
+    padding: 0 10px;
   }
 
   .slide-number {
@@ -465,9 +471,41 @@
     padding: 3px 8px;
   }
 
+  .slide-divider {
+    width: 50px;
+    height: 3px;
+    margin-bottom: 12px;
+  }
+
+  .hero-btns {
+    max-width: 250px;
+    margin-top: 20px;
+    gap: 12px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+  }
+
   .slide-progress-container {
     width: 80px;
     bottom: 70px;
+  }
+
+  .custom-dots {
+    bottom: 15px;
+  }
+
+  .custom-dots ul {
+    padding: 3px 10px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    margin: 0 3px;
   }
 }
 
