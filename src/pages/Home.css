@@ -76,6 +76,7 @@
   max-width: 1000px;
   padding: 20px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .slide-number {
@@ -449,63 +450,104 @@
 
 @media screen and (max-width: 480px) {
   .slide-content h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 8px;
   }
 
   .slide-content h2 {
-    font-size: 1.3rem;
-    margin-bottom: 12px;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
   }
 
   .slide-content p {
-    font-size: 1rem;
-    margin-bottom: 15px;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
     padding: 0 10px;
+    line-height: 1.4;
   }
 
   .slide-number {
-    font-size: 0.8rem;
-    top: 15px;
-    right: 15px;
-    padding: 3px 8px;
+    font-size: 0.7rem;
+    top: 10px;
+    right: 10px;
+    padding: 2px 6px;
   }
 
   .slide-divider {
-    width: 50px;
-    height: 3px;
-    margin-bottom: 12px;
+    width: 40px;
+    height: 2px;
+    margin-bottom: 10px;
   }
 
   .hero-btns {
-    max-width: 250px;
-    margin-top: 20px;
-    gap: 12px;
+    max-width: 220px;
+    margin-top: 15px;
+    gap: 10px;
   }
 
   .btn {
-    padding: 12px 20px;
-    font-size: 0.9rem;
+    padding: 10px 16px;
+    font-size: 0.8rem;
     letter-spacing: 0.5px;
+    min-width: 100%;
   }
 
   .slide-progress-container {
-    width: 80px;
-    bottom: 70px;
+    width: 60px;
+    bottom: 60px;
+    height: 3px;
   }
 
   .custom-dots {
-    bottom: 15px;
+    bottom: 10px;
   }
 
   .custom-dots ul {
-    padding: 3px 10px;
+    padding: 2px 8px;
   }
 
   .dot {
-    width: 8px;
-    height: 8px;
-    margin: 0 3px;
+    width: 6px;
+    height: 6px;
+    margin: 0 2px;
+  }
+
+  .slick-arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+
+  .slick-prev {
+    left: 5px;
+  }
+
+  .slick-next {
+    right: 5px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .slide-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .slide-content h2 {
+    font-size: 1rem;
+  }
+
+  .slide-content p {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+  }
+
+  .hero-btns {
+    max-width: 200px;
+  }
+
+  .btn {
+    padding: 8px 14px;
+    font-size: 0.7rem;
   }
 }
 

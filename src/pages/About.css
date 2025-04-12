@@ -269,4 +269,73 @@
   .values-grid {
     grid-template-columns: 1fr;
   }
+
+  .founder-section {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .founder-image {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .founder-image .image-placeholder {
+    height: 350px;
+  }
+
+  .values-section {
+    padding: 30px 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-hero p {
+    font-size: 1rem;
+  }
+
+  .about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .founder-content h3 {
+    font-size: 1.8rem;
+  }
+
+  .founder-title {
+    font-size: 1.1rem;
+  }
+
+  .founder-description {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .image-placeholder {
+    height: 250px;
+  }
+
+  .founder-image .image-placeholder {
+    height: 300px;
+  }
+
+  .about-section {
+    margin-bottom: 60px;
+  }
+
+  .value-card {
+    padding: 20px;
+  }
 }
