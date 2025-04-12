@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { FaChevronLeft, FaChevronRight, FaWhatsapp } from 'react-icons/fa';
 
 // Import client logos
 import hindustan from '../img/clients/hindustan.png';
@@ -133,9 +134,18 @@ function Home() {
                   <h2>{slide.subtitle}</h2>
                   <p>{slide.description}</p>
                   <div className="hero-btns">
-                    <button className="btn btn-primary">GET STARTED</button>
-                    <button className="btn btn-outline">LEARN MORE</button>
+                    <Link to="/contact" className="btn btn-primary">GET STARTED</Link>
+                    <Link to="/about" className="btn btn-outline">LEARN MORE</Link>
                   </div>
+                  <a
+                    href="https://wa.me/919999999999"
+                    className="whatsapp-btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Contact on WhatsApp"
+                  >
+                    <FaWhatsapp /> Chat on WhatsApp
+                  </a>
                 </div>
                 <div className="slide-progress-container">
                   <div

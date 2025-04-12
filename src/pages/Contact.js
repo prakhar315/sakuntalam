@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import { FaWhatsapp } from 'react-icons/fa';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -62,10 +63,26 @@ function Contact() {
                 </div>
               </div>
               <div className="contact-item">
+                <FaWhatsapp className="whatsapp-icon" />
+                <div>
+                  <h3>WhatsApp</h3>
+                  <p>
+                    <a
+                      href="https://wa.me/917052221111"
+                      className="whatsapp-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Chat with us on WhatsApp
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div className="contact-item">
                 <i className="fas fa-envelope"></i>
                 <div>
                   <h3>Email</h3>
-                  <p>official@sankuntalam.com</p>
+                  <p>official@sakuntalam.com</p>
                 </div>
               </div>
               <div className="contact-item">
