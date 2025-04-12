@@ -33,46 +33,57 @@
   justify-self: start;
   cursor: pointer;
   text-decoration: none;
-  font-size: 2rem;
   display: flex;
   align-items: center;
-  font-weight: bold;
-  gap: 12px;
+  gap: 10px;
   transition: all 0.3s ease;
+  padding: 5px;
+  border-radius: 6px;
 }
 
 .navbar-logo:hover {
   transform: scale(1.02);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .logo-img {
-  height: 40px;
-  width: auto;
-  border-radius: 8px;
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
   object-fit: cover;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  filter: brightness(1.05) contrast(0.95);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .navbar.scrolled .logo-img {
-  height: 35px;
+  height: 32px;
+  width: 32px;
 }
 
 .logo-text {
-  background: linear-gradient(45deg, #fff, #4CAF50);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: #fff;
   transition: all 0.3s ease;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   letter-spacing: 0.5px;
-  font-weight: 600;
+  font-weight: 500;
+  text-transform: capitalize;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.logo-text::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(76, 175, 80, 0.7), transparent);
 }
 
 .navbar.scrolled .logo-text {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 
 .nav-menu {
@@ -248,16 +259,17 @@
     top: 0;
     left: 0;
     transform: translate(15%, 50%);
-    gap: 8px;
+    gap: 6px;
   }
 
   .logo-img {
-    height: 35px;
-    border-radius: 6px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
   }
 
   .logo-text {
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
 
   .navbar.scrolled .navbar-logo {
@@ -265,11 +277,12 @@
   }
 
   .navbar.scrolled .logo-img {
-    height: 30px;
+    height: 26px;
+    width: 26px;
   }
 
   .navbar.scrolled .logo-text {
-    font-size: 1.3rem;
+    font-size: 0.9rem;
   }
 
   .menu-icon {

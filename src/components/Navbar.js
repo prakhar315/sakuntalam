@@ -49,7 +49,7 @@ const Navbar = () => {
       <div className="navbar-container">
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
           <img src={logo} alt="OutdoorAds Logo" className="logo-img" />
-          <span className="logo-text">sankuntlam Ads</span>
+          <span className="logo-text">Sakuntalam Ads</span>
         </Link>
         <div className="menu-icon" onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
