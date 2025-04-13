@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css';
-import about_hero from '../img/company/about_hero.jpg'
+import about_hero from '../img/company/about_hero.jpg';
 import founder_img from '../img/founder/founder_img.jpg';
 import journey_img from '../img/journey/journey_img.png';
 import mission from '../img/mission/mission.jpg';
