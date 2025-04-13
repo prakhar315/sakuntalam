@@ -26,7 +26,7 @@ if (!fs.existsSync(indexHtmlPath)) {
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sakuntalam - Outdoor Advertising Solutions</title>
+  <title>Sakuntlam - Outdoor Advertising Solutions</title>
 </head>
 <body>
   <div id="root"></div>

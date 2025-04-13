@@ -52,7 +52,8 @@ function Contact() {
                 <i className="fas fa-map-marker-alt"></i>
                 <div>
                   <h3>Address</h3>
-                  <p>Office: 13A/3C Bank Road, Prayagraj, Uttar Pradesh</p>
+                  <p>Head Office: 13A/3C Bank Road, Prayagraj, Uttar Pradesh</p>
+                  <p>Branch Office: Delhi,Lucknow,Bhopal,Mumbai/Patna</p>
                 </div>
               </div>
               <div className="contact-item">
