@@ -82,7 +82,7 @@ function Contact() {
                 <i className="fas fa-envelope"></i>
                 <div>
                   <h3>Email</h3>
-                  <p>official@sakuntalam.com</p>
+                  <p>official@sakuntlam.com</p>
                 </div>
               </div>
               <div className="contact-item">

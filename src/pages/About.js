@@ -1,8 +1,9 @@
 import React from 'react';
 import './About.css';
-import about_hero from '../img/about-hero.jpg';
-import founder_img from '../img/founder.jpg';
-import journey from '../img/journey.jpg';
+import about_hero from '../img/company/about_hero.jpg'
+import founder_img from '../img/founder/founder_img.jpg';
+import journey_img from '../img/journey/journey_img.png';
+import mission from '../img/mission/mission.jpg';
 
 function About() {
   return (
@@ -47,7 +48,7 @@ function About() {
             </div>
             <div className="about-image">
               <div className="image-placeholder story-image">
-                <img src={journey} alt="Our Journey Since 2008" className="about-img" />
+                <img src={journey_img} alt="Our Journey Since 2008" className="about-img" />
               </div>
             </div>
           </div>
@@ -58,7 +59,7 @@ function About() {
           <div className="about-section-content reverse">
             <div className="about-image">
               <div className="image-placeholder mission-image">
-                <img src={about_hero} alt="Our Mission" className="about-img" />
+                <img src={mission} alt="Our Mission" className="about-img" />
               </div>
             </div>
             <div className="about-text">
@@ -103,7 +104,6 @@ function About() {
               <p className="founder-description">
                 Under his leadership, sakuntlam has expanded its operations to cover major cities across the state and has built a reputation for delivering high-quality, impactful advertising solutions. Gyanendra's commitment to excellence, customer satisfaction, and ethical business practices continues to drive the company forward.
               </p>
-
             </div>
           </div>
         </div>
@@ -123,7 +123,6 @@ function About() {
               <h3>Excellence</h3>
               <p>We strive for excellence in everything we do, from the quality of our advertising solutions to our customer service.</p>
             </div>
-
           </div>
         </div>
       </div>

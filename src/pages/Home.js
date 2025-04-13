@@ -138,7 +138,7 @@ function Home() {
                     <Link to="/about" className="btn btn-outline">LEARN MORE</Link>
                   </div>
                   <a
-                    href="https://wa.me/919999999999"
+                    href="https://wa.me/+917052221111"
                     className="whatsapp-btn"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -273,7 +273,11 @@ function Home() {
         <div className="section-container">
           <h2>READY TO GET STARTED?</h2>
           <p>Let us help you create an impactful outdoor advertising campaign.</p>
-          <button className="btn btn-primary">CONTACT US NOW</button>
+          <Link to ="/contact">
+          <button className="btn btn-primary" >
+            CONTACT US NOW
+          </button>
+          </Link>
         </div>
       </div>
     </div>
