@@ -5,17 +5,59 @@
 }
 
 .about-hero {
-  background: url('https://source.unsplash.com/random/1600x900/?team') center center/cover no-repeat;
-  height: 50vh;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+  height: 60vh;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0 50px;
+}
+
+.hero-content {
+  flex: 1;
+  text-align: left;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.hero-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.hero-image-placeholder {
+  width: 100%;
+  max-width: 500px;
+  height: 350px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
-  object-fit: contain;
-  text-align: center;
-  padding: 0 20px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.hero-image-placeholder i {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #4CAF50;
+}
+
+.hero-image-placeholder p {
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 .about-hero h1 {
@@ -92,11 +134,53 @@
   height: 300px;
   background-color: #f5f5f5;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
   color: #999;
   border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.image-placeholder i {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #4CAF50;
+  z-index: 2;
+}
+
+.image-placeholder p {
+  z-index: 2;
+  font-weight: 500;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-placeholder:hover .image-overlay {
+  opacity: 1;
+}
+
+.story-image {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+}
+
+.mission-image {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
 }
 
 .highlight {
@@ -126,6 +210,16 @@
   transition: all 0.3s ease;
   overflow: hidden;
   position: relative;
+}
+
+.founder-image-placeholder {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+}
+
+.founder-image-placeholder:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .founder-image .image-placeholder::after {
@@ -254,6 +348,27 @@
 }
 
 @media screen and (max-width: 768px) {
+  .about-hero {
+    flex-direction: column;
+    height: auto;
+    padding: 50px 20px;
+    gap: 30px;
+  }
+
+  .hero-content {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .hero-image-container {
+    width: 100%;
+  }
+
+  .hero-image-placeholder {
+    max-width: 100%;
+    height: 300px;
+  }
+
   .about-section-content {
     flex-direction: column;
   }
@@ -264,6 +379,11 @@
 
   .about-image {
     margin-top: 30px;
+    width: 100%;
+  }
+
+  .image-placeholder {
+    height: 250px;
   }
 
   .values-grid {
@@ -292,11 +412,31 @@
 }
 
 @media screen and (max-width: 480px) {
+  .about-hero {
+    padding: 40px 15px;
+  }
+
+  .hero-content {
+    padding: 0;
+  }
+
   .about-hero h1 {
     font-size: 2.5rem;
   }
 
   .about-hero p {
+    font-size: 1rem;
+  }
+
+  .hero-image-placeholder {
+    height: 250px;
+  }
+
+  .hero-image-placeholder i {
+    font-size: 2.5rem;
+  }
+
+  .hero-image-placeholder p {
     font-size: 1rem;
   }
 
@@ -324,11 +464,19 @@
   }
 
   .image-placeholder {
-    height: 250px;
+    height: 200px;
+  }
+
+  .image-placeholder i {
+    font-size: 2rem;
+  }
+
+  .image-placeholder p {
+    font-size: 1rem;
   }
 
   .founder-image .image-placeholder {
-    height: 300px;
+    height: 280px;
   }
 
   .about-section {
